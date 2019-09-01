@@ -6,8 +6,14 @@ namespace VehicleUtilityTool.Models
 {
     public enum MenuItemType
     {
-        Browse,
-        About
+        HomePage,
+        Vehicle,
+        People,
+        FuelMileage,
+        Maintenance,
+        Problem,
+        Travel,
+        Places
     }
     public class HomeMenuItem
     {

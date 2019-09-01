@@ -18,8 +18,14 @@ namespace VehicleUtilityTool.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.HomePage, Title="Home Page" },
+                new HomeMenuItem {Id = MenuItemType.Vehicle, Title="Vehicles" },
+                new HomeMenuItem {Id = MenuItemType.People, Title="People" },
+                new HomeMenuItem {Id = MenuItemType.Travel, Title="Travel" },
+                new HomeMenuItem {Id = MenuItemType.Problem, Title="Problems" },
+                new HomeMenuItem {Id = MenuItemType.FuelMileage, Title="Fuel Mileage" },
+                new HomeMenuItem {Id = MenuItemType.Maintenance, Title="Maintenance" },
+                new HomeMenuItem {Id = MenuItemType.Places, Title="Places" },
             };
 
             ListViewMenu.ItemsSource = menuItems;
