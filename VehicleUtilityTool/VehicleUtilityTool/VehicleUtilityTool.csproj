@@ -39,11 +39,15 @@
     <EmbeddedResource Update="Views\Lists\Vehicles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\New\NewVehicle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\View\VehicleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\Edit\" />
-    <Folder Include="Views\View\" />
-    <Folder Include="Views\New\" />
   </ItemGroup>
 </Project>

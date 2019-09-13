@@ -20,23 +20,23 @@ namespace VehicleUtilityTool.Services
         public Travel Travel { get; set; }
         
 
-        SQLiteConnection DefaultsData;
-        SQLiteConnection VehicleData;
-        SQLiteConnection PersonData;
-        SQLiteConnection TravelData;
-        SQLiteConnection ProblemData;
-        SQLiteConnection MaintenanceData;
-        SQLiteConnection PlacesData;
-        SQLiteConnection FuelData;
+      public SQLiteConnection DefaultsData;
+      public SQLiteConnection VehicleData;
+      public SQLiteConnection PersonData;
+      public SQLiteConnection TravelData;
+      public SQLiteConnection ProblemData;
+      public SQLiteConnection MaintenanceData;
+      public SQLiteConnection PlacesData;
+      public SQLiteConnection FuelData;
 
-        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "AppDefaults.db3");
-        string path2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Vehicles.db3");
-        string path3 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Person.db3");
-        string path4 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Travel.db3");
-        string path5 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Places.db3");
-        string path6 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Problem.db3");
-        string path7 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Maintenance.db3");
-        string path8 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FuelMileage.db3");
+      public  string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "AppDefaults.db3");
+      public  string path2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Vehicles.db3");
+      public  string path3 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Person.db3");
+      public  string path4 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Travel.db3");
+      public  string path5 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Places.db3");
+      public  string path6 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Problem.db3");
+      public  string path7 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Maintenance.db3");
+       public string path8 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FuelMileage.db3");
       
         public DataConnections(Person person, Vehicle vehicle, AppDefaults appDefaults, Travel travel, Places places, Problem problem, 
             Maintenance maintenance,FuelMileage fuelMileage,Page page)
@@ -53,21 +53,21 @@ namespace VehicleUtilityTool.Services
 
 
             DefaultsData = new SQLiteConnection(path);
-            DefaultsData.CreateTable<AppDefaults>(CreateFlags.ImplicitPK);
+            //DefaultsData.CreateTable<AppDefaults>(CreateFlags.ImplicitPK);
             VehicleData = new SQLiteConnection(path2);
-            VehicleData.CreateTable<Vehicle>(CreateFlags.ImplicitPK);
+            //VehicleData.CreateTable<Vehicle>(CreateFlags.ImplicitPK);
             PersonData = new SQLiteConnection(path3);
-            PersonData.CreateTable<Person>(CreateFlags.ImplicitPK);
+            //PersonData.CreateTable<Person>(CreateFlags.ImplicitPK);
             TravelData = new SQLiteConnection(path4);
-            TravelData.CreateTable<Travel>(CreateFlags.ImplicitPK);
+           // TravelData.CreateTable<Travel>(CreateFlags.ImplicitPK);
             PlacesData = new SQLiteConnection(path6);
-            PlacesData.CreateTable<Places>(CreateFlags.ImplicitPK);
+            //PlacesData.CreateTable<Places>(CreateFlags.ImplicitPK);
             ProblemData = new SQLiteConnection(path6);
-            ProblemData.CreateTable<Problem>(CreateFlags.ImplicitPK);
+           // ProblemData.CreateTable<Problem>(CreateFlags.ImplicitPK);
             MaintenanceData = new SQLiteConnection(path7);
-            MaintenanceData.CreateTable<Maintenance>(CreateFlags.ImplicitPK);
+           // MaintenanceData.CreateTable<Maintenance>(CreateFlags.ImplicitPK);
             FuelData = new SQLiteConnection(path8);
-            FuelData.CreateTable<FuelMileage>(CreateFlags.ImplicitPK);
+           // FuelData.CreateTable<FuelMileage>(CreateFlags.ImplicitPK);
 
 
             var maxPk = DefaultsData.Table<AppDefaults>().OrderByDescending(d => d.Id).FirstOrDefault();

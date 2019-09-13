@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VehicleUtilityTool.Views
+namespace VehicleUtilityTool.Views.New
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
+	public partial class NewVehicle : ContentPage
 	{
-		public HomePage ()
+		public NewVehicle ()
 		{
 			InitializeComponent ();
-            Title = "Vehicle Utility Tool";
 		}
 	}
 }
